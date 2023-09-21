@@ -22,12 +22,14 @@ function generateGrade(studentInput){ //function that grades the students
         return "E" ;
     }
 }
+// readline allows us to get user input.
 const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
+
 rl.question("Please input the student's marks: ", function (userInput) {
 
 const studentInput = parseFloat(userInput);
