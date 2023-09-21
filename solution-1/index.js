@@ -24,7 +24,7 @@ function generateGrade(studentInput){ //function that grades the students
 }
 // readline allows us to get user input.
 const readline = require('readline');
-
+// this creates the interface for the readline 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -35,12 +35,12 @@ rl.question("Please input the student's marks: ", function (userInput) {
 
 const studentInput = userInput;
 
-//this compares value from 0 to 100 and ensures its in the 
+//this provides conditions for the values between 0 and 100 and grades them accordingly
 if(studentInput >= 0 && studentInput <= 100){
+    //here we call the function generateGrade to grade 
     const grade = generateGrade(studentInput);
     console.log("grade",grade);
-}else
-{
+}else{
     console.log("Incorrect input.Value should be between 0 and 100")
 }
 //this one closes the readline interface
