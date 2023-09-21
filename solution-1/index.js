@@ -30,15 +30,19 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+//thsi one gathers the student marks
 rl.question("Please input the student's marks: ", function (userInput) {
 
-const studentInput = parseFloat(userInput);
+const studentInput = userInput;
 
-if(!isNaN(studentInput) && studentInput >= 0 && studentInput <= 100){
+//this compares value from 0 to 100 and ensures its in the 
+if(studentInput >= 0 && studentInput <= 100){
     const grade = generateGrade(studentInput);
     console.log("grade",grade);
-}else{
+}else
+{
     console.log("Incorrect input.Value should be between 0 and 100")
 }
+//this one closes the readline interface
 rl.close();
 });
