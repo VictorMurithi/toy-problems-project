@@ -1,14 +1,20 @@
+const readline = require('readline');
+const generateGrade = require('./generateGrade'); // Import the generateGrade function from generateGrade.js
 
-  // readline allows us to get user input.
-  const readline = require('readline');
-  //imports the generated grade
-  const getGrade = require("./gradeGenerator")
-  // this creates the interface for the readline 
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  
-  //this one gathers the student marks
-  rl.question("Please input the student's marks: ", getGrade());
-  
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question("Please input the student's marks: ", (studentInput) => {
+  const marks = parseFloat(studentInput);
+
+  if (!isNaN(marks) && marks >= 0 && marks <= 100) {
+    const grade = generateGrade(marks);
+    console.log(`Grade: ${grade}`);
+  } else {
+    console.log("Incorrect input. Value should be between 0 and 100.");
+  }
+
+  rl.close();
+});
