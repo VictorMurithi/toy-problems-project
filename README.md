@@ -15,8 +15,4 @@ This project solves 3 challenges. The first is for student grade generator , the
  Victor Mutwiri Murithi
 
  ## LICENSE 
-<<<<<<< HEAD
- This project is licensed under the [](LICENSE)
-=======
  This project is licensed under the [](LICENSE).
->>>>>>> e6d357d ("completed  toy project")
