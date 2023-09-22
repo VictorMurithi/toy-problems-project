@@ -1,5 +1,5 @@
 const readline = require('readline');
-const generateGrade = require('./generateGrade'); // Import the generateGrade function from generateGrade.js
+const generateGrade = require('./gradeGenerator'); // Import the generateGrade function from generateGrade.js
 
 const rl = readline.createInterface({
   input: process.stdin,
