@@ -18,8 +18,9 @@ function generateGrade(studentInput){ //function that grades the students
       else if(studentInput>=0 && studentInput<=39){
           return "E" ;
       }
-    }else{
-        console.log("Incorrect input. Value should be between 0 and 100");
+    }
+    else{
+        return "Incorrect input. Value should be between 0 and 100"
   }
 }
 
