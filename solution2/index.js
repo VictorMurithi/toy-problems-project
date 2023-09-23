@@ -7,10 +7,6 @@ const rl = readline.createInterface({
 });
 
 rl.question("Please input the speed of the car: ", function(speedInput){
-  //converts the input into a number 
-  const speed = parseFloat(speedInput);
-  //calls the function
-  const points = getSpeed(speed);
-    console.log ("demerit points :" ,points );
-    return getSpeed;
+  console.log(getSpeed(speedInput));
+  rl.close();
 });

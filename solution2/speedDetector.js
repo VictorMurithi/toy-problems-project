@@ -13,7 +13,7 @@ function SpeedGun(speed){
                 //calculating the total points over the speed limit
                 const totalPoints =  Math.floor(speedOver/kmsPerPoint);
                 //nested if , else-if condition inside the other condition
-                if (speed <= speedLimit+4){
+                if (kiloMetersPerHour <= speedLimit+4){
                     return "no demerit points"
                 }else if (totalPoints>12){
                     return "License suspended";
