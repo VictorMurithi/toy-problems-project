@@ -7,10 +7,6 @@ const rl = readline.createInterface({
 });
 
 rl.question(" Please input your salary : ", function(salaryInput){
-  //converts the input into a number 
-  const salary = parseFloat(salaryInput);
-  //calls the function
-  const netSalary = getSalary(salaryInput);
-    console.log ("Netsalary :" , netSalary);
-    return ;
+  console.log("Net salary" ,getSalary(salaryInput))
+    rl.close();
 });
