@@ -59,6 +59,10 @@ function taxCalculator(grossSalary){
     };
     // declaring variable net salary and assigning it the calculations
     const netSalary = grossSalary - deductions.payee() - deductions.healthFund() - deductions.nssf();
+    console.log("grossSalary", grossSalary);
+    console.log("payee",deductions.payee());
+    console.log("NHIF",deductions.healthFund())
+    console.log("NSSF",deductions.nssf())
     return netSalary;
 }
 module.exports = taxCalculator;
